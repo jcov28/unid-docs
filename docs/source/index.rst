@@ -1,17 +1,21 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to the `unid` documentation!
+====================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**unid** is a Python utility for unique ID
+generation. Specifically the generation of
+numerical IDs for constants and variables.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development.
+   This project is under active development and
+   is still in a development phase. Features and
+   function names may be changed, deprecated or
+   removed. We will give you a deprecation warning
+   multiple versions in advance before permentantly
+   deleting the function.
 
 Contents
 --------
@@ -19,4 +23,3 @@ Contents
 .. toctree::
 
    usage
-   api
