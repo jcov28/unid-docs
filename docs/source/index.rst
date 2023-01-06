@@ -24,4 +24,3 @@ Contents
 
    usage
    api
-      `unid.IDManager`
