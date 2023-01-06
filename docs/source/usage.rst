@@ -130,8 +130,8 @@ inheritance works:
 
 >>> import unid
 >>> class MyOverlay(unid.Overlay):
-        def _overlay(self, num):
-            return num*2
+>>>     def _overlay(self, num):
+>>>         return num*2
 >>> manager = unid.IDManager(overlay=MyOverlay())
 >>> print(manager.new)
 >>> print(manager.new)
