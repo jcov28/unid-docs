@@ -1,6 +1,12 @@
 Usage
 =====
 
+.. note::
+   
+   This section does not give extensive
+   knowledge on ``unid``. To receive
+   extensive knowledge, visit the API.
+
 Using ``unid`` should not be a difficult
 feat. We have created a few examples below
 to get you started. You can always view the
@@ -17,9 +23,20 @@ unid requires an installation via pip
 .. code-block:: console
 
    (.venv) $ pip install unid==0.0.0rc10
+   
+.. note::
+
+   In this rare case that this installation does
+   not work, you can install using the `tar.gz`
+   or the wheel available in the downloads section
+   on `PyPi <https://pypi.org/project/unid/#files>`.
 
 Using ID Managers
 ----------------
+
+An ID Manager is a dynamic Pythonic class to
+manage and generate new IDs. These IDs can be
+used for anything from constants from databases.
 
 To start using an ID Manager, you can use
 the ``unid.IDManager`` class. Although there are
@@ -75,3 +92,51 @@ And here's a shorter example,
 >>> import unid
 >>> manager = unid.IDManager(overlay=unid.BinaryOverlay())
 >>> print(manager.new)
+
+There are many more overlays than ddiscussed
+here, including the ``OctalOverlay`` and the
+``HexadecimalOverlay``. Future releases of 
+``unid`` will also include more overlays to
+use in your projects.
+
+Making Custom Overlays
+----------------------
+
+Built-in overlays are great but in many
+cases you may want to create custom overlays
+for custom situations.
+
+.. note::
+   
+   We assume that you have basic knowledge
+   of Object Oriented Programming and
+   inheritance in Python. This tutorial
+   may be difficult without prior
+   knowledge.
+   
+Custom overlays inherit from a base class:
+``Overlay``. There is one key function that
+each overlay must contain to not raise an
+error: ``unid.Overlay._overlay``. This function
+takes one attribute ``num``. This attribute
+is the input that will be transformed and
+then returned. This ``num`` attribute could
+be a string, integer or even a float. You
+will have to program your algorithm to respond
+to any datatype that could be passed in.
+
+Below is an example that shows how this
+inheritance works:
+
+.. code_block::
+   
+   import unid
+   
+   class MyOverlay(unid.overlay):
+      def _overlay(num):
+         return num*2
+         
+   manager = unid.IDManager(overlay=MyOverlay())
+   print(manager.new)
+   print(manager.new)
+   print(manager.new)
