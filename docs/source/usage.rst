@@ -128,15 +128,11 @@ to any datatype that could be passed in.
 Below is an example that shows how this
 inheritance works:
 
-.. code_block:: python
-   
-   import unid
-   
-   class MyOverlay(unid.overlay):
-      def _overlay(num):
-         return num*2
-         
-   manager = unid.IDManager(overlay=MyOverlay())
-   print(manager.new)
-   print(manager.new)
-   print(manager.new)
+>>> import unid
+>>> class MyOverlay(unid.Overlay):
+        def _overlay(self, num):
+            return num*2
+>>> manager = unid.IDManager(overlay=MyOverlay())
+>>> print(manager.new)
+>>> print(manager.new)
+>>> print(manager.new)
