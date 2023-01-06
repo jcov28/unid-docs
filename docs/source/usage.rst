@@ -128,7 +128,7 @@ to any datatype that could be passed in.
 Below is an example that shows how this
 inheritance works:
 
-.. code_block::
+.. code_block:: python
    
    import unid
    
