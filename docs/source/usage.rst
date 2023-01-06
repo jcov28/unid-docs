@@ -29,7 +29,7 @@ unid requires an installation via pip
    In this rare case that this installation does
    not work, you can install using the `tar.gz`
    or the wheel available in the downloads section
-   on `PyPi <https://pypi.org/project/unid/#files>`.
+   on the PyPi project page.
 
 Using ID Managers
 ----------------
