@@ -5,7 +5,7 @@ This is not meant to be read front to back,
 but rather meant to be consulted when a
 question or an issue arises.
 
-- ``unid.IDGenerator``
+- :ref:```unid.IDGenerator```
 - ``unid.PersistentIDGenerator``
 - ``unid.BinaryOverlay``
 - ``unid.Base2Overlay``
@@ -14,3 +14,5 @@ question or an issue arises.
 - ``unid.Base10Overlay``
 - ``unid.HexadecimalOverlay``
 - ``unid.Base16Overlay``
+
+:ref:```unid.IDGenerator```
