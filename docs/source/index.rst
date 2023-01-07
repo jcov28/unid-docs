@@ -10,6 +10,11 @@ how to :ref:`install` the project.
 
 .. note::
 
+   You are viewing the beta version of this
+   package. Errors may still be present.
+
+.. note::
+
    This project is under active development and
    is still in a development phase. Features and
    function names may be changed, deprecated or
