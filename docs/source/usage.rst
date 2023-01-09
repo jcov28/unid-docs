@@ -136,3 +136,26 @@ inheritance works:
 >>> print(manager.new)
 >>> print(manager.new)
 >>> print(manager.new)
+
+Introduction to Persistent Data
+-------------------------------
+
+You may at some point encounter a idea
+that needs persistent ID manager. We have
+a class just for this: ``PersistentIDManager``.
+This is very similar to the known class,
+``IDManager``. This data is stored locally
+in a ``dbm`` database in your ``.unid`` folder.
+Below is a short example of this concept:
+
+>>> import unid
+>>> manager = unid.PersistentIDManager("test_manager") # name attribute required
+>>> print(manager.new)
+0
+>>> # quit python
+>>> manager = unid.PersistentIDManager("test_manager") # use the same name
+>>> print(manager.new) # should remember data
+1
+
+As with the normal ``IDManager``, you can
+always use an overlay on a persistent manager.
