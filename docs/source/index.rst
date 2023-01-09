@@ -8,10 +8,10 @@ numerical IDs for constants and variables.
 Check out the :doc:`usage` section for further information, including
 how to :ref:`install` the project.
 
-.. note::
+.. warning::
 
    You are viewing the beta version of this
-   package. Errors may still be present.
+   package. Features may be changed or removed.
 
 .. note::
 
